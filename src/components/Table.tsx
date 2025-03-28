@@ -1,23 +1,21 @@
 'use client'
 import {useState, useEffect} from "react";
+import {TableProps} from "@/Type";
 
-type Props = {
-  column : number[],
-  row: number[]
-}
-export default function Table(props:Props) {
+export default function Table(props:TableProps) {
   const [columns, setColumns] = useState<number[]>(props.column);
   const [rows, setRows] = useState<number[]>(props.row);
+  const [data, setData] = useState<number[][]>(props.data);
   return (
     <div>
       <main>
-        <table>
+        <table border={1}>
           <tbody>
-          {columns.map((item, index) => (
+          {columns.map((item1, index) => (
             <tr key={index}>
-              {rows.map((item, index) => (
-                <td key={index}>
-                  11
+              {rows.map((item2, index2) => (
+                <td key={index2+index}>
+                  {data[index][index2]}
                 </td>
               ))
               }
