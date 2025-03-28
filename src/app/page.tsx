@@ -1,17 +1,20 @@
 import Table from '@/components/Table';
+import range from "@/functions/range";
 
 export default function Home() {
-  const column = [1,2,3];
-  const row = [1,2,3,4];
+  const column = range(0,5);
+  const row = range(0,5);
   const data = [
-    [1,2,3,4],
-    [5,6,7,8],
-    [9,10,11,12]
+    range(0,5),
+    range(5,10),
+    range(10,15),
+    range(15,20),
+    range(20,25)
   ]
   return (
     <main>
       <div>
-        <Table column={column} row={row} data={data}></Table>
+        <Table column={column} row={row} data={data} />
       </div>
     </main>
   );
