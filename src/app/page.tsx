@@ -2,7 +2,6 @@
 import {useState, useEffect} from "react";
 import type {TableProps} from "@/Type";
 import Table from '@/components/Table';
-import range from "@/functions/range";
 import page from "./page.module.css";
 import "./global.css";
 import {getTimeTable} from "@/services/TimeTableService";
