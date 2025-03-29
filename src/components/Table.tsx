@@ -1,11 +1,11 @@
 'use client'
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import type {TableProps} from "@/Type";
 
 export default function Table(props:TableProps) {
-  const [columns, setColumns] = useState<number[]>(props.column);
-  const [rows, setRows] = useState<number[]>(props.row);
-  const [data, setData] = useState<number[][]>(props.data);
+  const [columns, ] = useState<number[]>(props.column);
+  const [rows, ] = useState<number[]>(props.row);
+  const [data, ] = useState<number[][]>(props.data);
   return (
     <table border={1}>
       <tbody>
