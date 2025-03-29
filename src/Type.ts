@@ -1,6 +1,6 @@
 type TableProps = {
-  column : number[],
-  row: number[],
+  column : number,
+  row: number,
   data: number[][]
 }
 
