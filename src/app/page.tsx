@@ -1,5 +1,7 @@
 import Table from '@/components/Table';
 import range from "@/functions/range";
+import page from "./page.module.css";
+import "./global.css";
 
 export default function Home() {
   const column = range(0,5);
@@ -12,10 +14,11 @@ export default function Home() {
     range(20,25)
   ]
   return (
-    <main>
-      <div>
+    <main className={page.main}>
+
+      <article className={page.timetableContainer}>
         <Table column={column} row={row} data={data} />
-      </div>
+      </article>
     </main>
   );
 }
