@@ -1,7 +1,6 @@
 import {NextResponse} from "next/server";
 import type {TableProps} from "@/Type";
 import range from '@/functions/range'
-
 export async function GET(){
   const data:TableProps = {
     column : 5,

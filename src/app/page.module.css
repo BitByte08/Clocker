@@ -14,10 +14,18 @@
     width: 100%;
 }
 .leftTab{
+    position: relative;
     grid-area: left-tab;
     background-color: red;
     height: 100%;
     width: 100%;
+}
+.leftTabLine{
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 2px;
+    background-color: blue;
+
 }
 .bottomTab{
     grid-area: bottom-tab;
