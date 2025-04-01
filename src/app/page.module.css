@@ -25,11 +25,17 @@
     top: 0; bottom: 0; right: 0;
     width: 2px;
     background-color: blue;
-
 }
 .bottomTab{
+    position: relative;
     grid-area: bottom-tab;
     background-color: green;
     height: 100%;
     width: 100%;
+}
+.bottomTabLine{
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background-color: blue;
 }

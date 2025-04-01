@@ -28,8 +28,9 @@ export default function Home() {
       <ToolBox TabClass={page.leftTab} LineClass={page.leftTabLine}>
           <h1>dfaa</h1>
       </ToolBox>
-      <article className={page.bottomTab}>
-      </article>
+      <ToolBox TabClass={page.bottomTab} LineClass={page.bottomTabLine}>
+        <h1>dfaa</h1>
+      </ToolBox>
     </main>
   );
 }
