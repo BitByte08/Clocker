@@ -2,6 +2,7 @@
 import {useState, useEffect} from "react";
 import type {TableProps} from "@/Type";
 import Table from '@/components/Table';
+import ToolBox from "@/components/ToolBox";
 import page from "./page.module.css";
 import "./global.css";
 import {getTimeTable} from "@/services/TimeTableService";
@@ -22,10 +23,11 @@ export default function Home() {
   return (
     <main className={page.main}>
       <article className={page.timetableContainer}>
-        <Table column={columns} row={rows} data={datas} />
+        <Table column={columns} row={rows} data={datas}/>
       </article>
-      <article className={page.leftTab}>
-      </article>
+      <ToolBox TabClass={page.leftTab} LineClass={page.leftTabLine}>
+          <h1>dfaa</h1>
+      </ToolBox>
       <article className={page.bottomTab}>
       </article>
     </main>
