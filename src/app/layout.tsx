@@ -1,6 +1,8 @@
+import React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import TeamlistBar from "@/components/global/layout/TeamlistBar";
 
 const pretendard = localFont({
   src: "../../public/fonts/pretendard/PretendardVariable.woff2",
@@ -18,16 +20,12 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="ko" className={`${pretendard.variable}`}>
-      <body className={`${pretendard.className}`}>
-        {children}
-      </body>
-    </html>
-  );
-}
+const RootLayout: React.FC<Readonly<{children: React.ReactNode;}>> = ({children}) => 
+  <html lang="ko" className={`${pretendard.variable}`}>
+    <body className={`${pretendard.className}`}>
+      <TeamlistBar />
+      {children}
+    </body>
+  </html>
+
+export default RootLayout;
