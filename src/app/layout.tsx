@@ -8,8 +8,8 @@ const pretendard = localFont({
   src: "../../public/fonts/pretendard/PretendardVariable.woff2",
   display: "swap",
   weight: "45 920",
-  variable: "--font-pretendard"
-})
+  variable: "--font-pretendard",
+});
 
 export const metadata: Metadata = {
   title: "Clocker",
@@ -17,15 +17,18 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  }
+  },
 };
 
-const RootLayout: React.FC<Readonly<{children: React.ReactNode;}>> = ({children}) => 
+const RootLayout: React.FC<Readonly<{ children: React.ReactNode }>> = ({
+  children,
+}) => (
   <html lang="ko" className={`${pretendard.variable}`}>
-    <body className={`${pretendard.className}`}>
+    <body className={`${pretendard.className} p-2 flex gap-2`}>
       <TeamlistBar />
       {children}
     </body>
   </html>
+);
 
 export default RootLayout;

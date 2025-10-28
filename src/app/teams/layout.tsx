@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import TeamToolbar from "@/components/Teams/layout/TeamToolbar";
 
 export const metadata: Metadata = {
   title: "Clocker",
@@ -12,6 +13,11 @@ export const metadata: Metadata = {
 
 const MainLayout: React.FC<Readonly<{ children: React.ReactNode }>> = ({
   children,
-}) => <main className="flex-1">{children}</main>;
+}) => (
+  <main className="flex-1">
+    {children}
+    <TeamToolbar />
+  </main>
+);
 
 export default MainLayout;
